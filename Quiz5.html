@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz with images">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Надпись "Question 5" в верхнем левом углу -->
+        <div class="question-title">
+            <h2>Question 5</h2>
+        </div>
+        <!-- Изображение -->
+        <div class="image-container">
+            <img id="quiz-image" src="image/Krigo.jpg" alt="Silhouette" onerror="this.src='default-avatar.png'">
+        </div>
+        <!-- Кнопка для раскрытия изображения -->
+        <div class="reveal-container">
+            <button id="reveal-button" aria-label="Show more hints">Reveal More</button>
+        </div>
+        <!-- Поле для ввода ответа -->
+        <div class="input-container">
+            <input type="text" id="answer-input" placeholder="Your answer..." aria-label="Enter your answer">
+            <button id="submit-button" aria-label="Submit answer">Submit</button>
+        </div>
+        <!-- Анимация салюта -->
+        <div id="fireworks"></div>
+    </div>
+    <script src="script5.js"></script>
+</body>
+</html>
