@@ -1,0 +1,173 @@
+/* Общий стиль для страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    background-size: 200% 200%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+/* Анимация градиента */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Стиль для контейнера викторины */
+.quiz-container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Стиль для изображения */
+.image-container img {
+    max-width: 300px;
+    height: auto;
+    transition: clip-path 0.5s ease-in-out;
+}
+#quiz-image {
+    clip-path: circle(10% at center);
+}
+
+/* Адаптивность для smaller экранов */
+@media (max-width: 600px) {
+    .image-container img {
+        max-width: 200px;
+    }
+}
+
+/* Стиль для контейнера кнопки "Показать больше" */
+.reveal-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Стиль для кнопки "Показать больше" */
+#reveal-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#reveal-button:hover {
+    background-color: #0056b3;
+}
+#reveal-button:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
+
+/* Стиль для поля ввода и кнопки "Ответить" */
+.input-container input {
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#submit-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#submit-button:hover {
+    background-color: #1e7e34;
+}
+#submit-button:focus {
+    outline: 2px solid #1e7e34;
+    outline-offset: 2px;
+}
+
+/* Стиль для кнопки "Пас" */
+#pass-button {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#pass-button:hover {
+    background-color: #a71d2a;
+}
+#pass-button:focus {
+    outline: 2px solid #a71d2a;
+    outline-offset: 2px;
+}
+
+/* Анимация салюта */
+#fireworks {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: none;
+    background: radial-gradient(circle, yellow, orange, red, transparent);
+    opacity: 0;
+}
+.firework-animation {
+    animation: fireworks 2s ease-in-out;
+    display: block;
+}
+@keyframes fireworks {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+/* Стиль для заголовка "Вопрос 1" */
+.question-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.question-title h2 {
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+/* Адаптивность для smaller экранов */
+@media (max-width: 600px) {
+    .question-title h2 {
+        font-size: 1.2rem;
+    }
+}

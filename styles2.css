@@ -1,0 +1,98 @@
+/* Стиль для верхней надписи "Поздравление" */
+.top-title {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 20px; /* Расположение сверху */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translateX(-50%); /* Точное центрирование */
+    width: 100%; /* Занимает всю ширину страницы */
+    text-align: center; /* Центрирование текста */
+    z-index: 10; /* Над другими элементами */
+}
+
+.top-title h1 {
+    font-size: 3rem; /* Большой размер шрифта */
+    color: white; /* Белый цвет текста */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Эффект тени */
+    margin: 0; /* Убираем отступы */
+}
+
+/* Общий стиль для страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    /* Яркий градиентный фон */
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    background-size: 200% 200%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+/* Анимация градиента */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Контейнер для поздравления */
+.congrats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%; /* Ширина контейнера */
+    max-width: 1200px; /* Максимальная ширина */
+    text-align: center;
+    margin-top: 100px; /* Отступ от верха */
+}
+
+/* Стиль для левой и правой части */
+.congrats-item {
+    flex: 1; /* Занимает равную ширину */
+    text-align: center;
+}
+
+/* Стиль для центральной части */
+.congrats-center {
+    flex: 2; /* Центральная часть шире */
+    text-align: center;
+    margin: 0 20px; /* Отступы с боков */
+}
+
+/* Заголовки */
+.congrats-center p {
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Изображения */
+.congrats-image {
+    max-width: 300px;
+    height: auto;
+    margin-top: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.congrats-image:hover {
+    transform: scale(1.2); /* Увеличение при наведении */
+}
+
+/* Стиль для заголовков "Молодец!" и "Ты молодец!" */
+.congrats-item h2 {
+    font-size: 2rem; /* Размер шрифта */
+    color: white; /* Белый цвет текста */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Эффект тени для контраста с фоном */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
