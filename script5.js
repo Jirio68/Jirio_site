@@ -9,7 +9,7 @@ const revealButton = document.getElementById("reveal-button");
 const submitButton = document.getElementById("submit-button");
 const answerInput = document.getElementById("answer-input");
 const fireworksContainer = document.getElementById("fireworks");
-const correctAnswer = "Krigo"; // Правильный ответ
+const correctAnswer = "Skipper"; // Правильный ответ
 
 // Обработка кнопки "Показать больше"
 if (revealButton) {
